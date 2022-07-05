@@ -31,3 +31,6 @@ termcolor
 
 #visualisation
 plotly
+
+#web interface
+streamlit
