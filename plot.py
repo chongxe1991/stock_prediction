@@ -14,18 +14,18 @@ class Stock():
         self.revenue = data.loc["Total Revenue"]
         self.ebit = data.loc["Ebit"]
         self.netincome = data.loc["Net Income"]
-        self.grossmargin = data.loc["Gross Margin"][0]
-        self.ebitmargin = data.loc["EBIT Margin"][0]
-        self.netmargin = data.loc["Net Margin"][0]
+        self.grossmargin = data.loc["Gross Margin"]
+        self.ebitmargin = data.loc["EBIT Margin"]
+        self.netmargin = data.loc["Net Margin"]
         self.operatingcashflow = data.loc["Total Cash From Operating Activities"]
         self.freecashflow = data.loc["Free Cash Flow"]
-        self.debtequity = data.loc["Debt-Equity Ratio"][0]
-        self.netdebtratio = data.loc["Net-Debt Ratio"][0]
-        self.currentratio = data.loc["Current Ratio"][0]
-        self.cashratio = data.loc["Cash Ratio"][0]
-        self.roe = data.loc["ROE"][0]
-        self.ccc = data.loc["Cash Conversion Cycle"][0]
-        self.qoe = data.loc["Quality of Earnings"][0]
+        self.debtequity = data.loc["Debt-Equity Ratio"]
+        self.netdebtratio = data.loc["Net-Debt Ratio"]
+        self.currentratio = data.loc["Current Ratio"]
+        self.cashratio = data.loc["Cash Ratio"]
+        self.roe = data.loc["ROE"]
+        self.ccc = data.loc["Cash Conversion Cycle"]
+        self.qoe = data.loc["Quality of Earnings"]
 
 
     def check_cagr_rev(self):
@@ -125,4 +125,4 @@ class Stock():
         names = ["Growth", "Profitability", "Liquidity", "Efficiency", "Health"]
         data = go.Scatterpolar(r = criterias, theta = names, fill = "toself")
         fig = go.Figure(data = data, layout = dict(title = self.name.upper()))
-        fig.show()
+        return fig
